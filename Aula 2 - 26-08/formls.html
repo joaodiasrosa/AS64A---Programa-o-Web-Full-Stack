@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    <p>
+    <!-- Parte 1 -->
+    <h2>
         Selecione um radio button e clique em enviar
-    </p>
+    </h2>
     <p>Genero:</p>
     <input type="radio" name="gender" value="Masculino">Masculino
     <input type="radio" name="gender" value="Feminino">Feminino
@@ -20,7 +21,51 @@
     </button>
     <div id="result"></div>
 
-    <!-- 
+    <!-- Parte 2 -->
+    <div>
+        <h2>
+            Qual elemento da lista foi selecionado?
+        </h2>
+        <p>
+            Selecione uma das opções de plano:
+            <select id="select1">
+                <option value="free">Free</option>
+                <option value="basic">Basic</option>
+                <option value="premium">Premium</option>
+            </select>
+        </p>
+        <p>
+            O valor selecionado é:
+            <span class="output"></span>
+        </p>
+        <button onclick="getOption()">Veja a Seleção</button>
+    </div>
+
+    <!-- Parte 3 -->
+     <div>
+        <h2>Elementos check</h2>
+        <p>Quais sua Prioridades?</p>
+        <p>
+            Trabalho <input type="checkbox" name="Work" value="Work" id="w">
+        </p>
+        <p>
+            Estudos <input type="checkbox" name="Study" value="Study" id="s">
+        </p>
+        <p>
+            Saúde <input type="checkbox" name="Healt" value="Healt" id="h">
+        </p>
+        <p>
+            <button onclick="getChechedBox()">Enviar</button>
+        </p>
+        <p>
+            Minhas prioridades são <span id="pri">...</span>
+        </p>
+     </div>
+
+
+
+
+    <!-- usado na primeira parte - versão sem arquivo externo 
     <script>
         function displayRadioValue(){
             var elemento = document.getElementsByName('gender')
